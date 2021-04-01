@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let Library = [
+                    {
+                        "name": "Maryville public Library",
+                        "location": "Maryville",
+                        "count": "1500"                        
+                    },
+                    {
+                        "name": "Kansas public Library",
+                        "location": "kansas",
+                        "count": "1000"
+                    },
+                    {
+                        "name": "Ohio public Library",
+                        "location": "Ohio",
+                        "count": "4000"
+                    },                   
+                ]
+            each Libraries in Library
+                div(class="col-sm-2" ) #{Libraries.name}
+                div(class="col-sm-2" ) #{Libraries.location}
+                div(class="col-sm-2" ) #{Libraries.count}
